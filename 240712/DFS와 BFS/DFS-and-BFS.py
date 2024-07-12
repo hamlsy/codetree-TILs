@@ -7,7 +7,9 @@ graph = [[] for _ in range(n+1)]
 for _ in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)
+    graph[a].sort()
     graph[b].append(a)
+    graph[b].sort()
 
 dfs_result = []
 v = [False] * (n+1)
